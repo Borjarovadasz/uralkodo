@@ -1,18 +1,28 @@
 table {
-
+border-collapse: collapse;
 }
 tbody {
-
+    border: solid 1px;
 }
-
 tr{
-
+    border: solid 1px;
 }
-
 td{
-
+    border: solid 1px;
+}
+th{
+    border: solid 1px;
 }
 
 .szines-oszlop {
     background-color: yellow;
+}
+
+.field {
+
+}
+
+.error {
+    color: red;
+    text-shadow: 2px 2px;
 }

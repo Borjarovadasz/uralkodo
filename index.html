@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magyar Uralkodók Táblázata</title>
     <link href="grafika.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,10 +20,11 @@
             <col span="1" class="szines-oszlop">
           </colgroup>
         <thead>
+            
             <tr>
-                <th>Uralkodó</th>
-                <th>Esemény</th>
-                <th>Évszám</th>
+               <th id="uralkodo">Uralkodó</th>
+                <th id="esemeny">Esemény</th>
+                <th id="evszam">Évszám</th>
             </tr>
         </thead>
         <tbody>
@@ -85,12 +87,14 @@
                 <input type="text" id="evszam2" name="evszam2"><br><br>
         
                 <button>Hozzáadás</button>
+                <button onclick="generateheader('Uralkodo', 'Esemény', 'Évszám'), generatetable(tomb)">Generálás</button>
             </div>
           
         </div>
        
     </form>
-
+   
+    <script src="script.js"></script>
 </body>
 
 </html>

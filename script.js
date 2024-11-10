@@ -1,31 +1,42 @@
-const tomb = 
+const tomb = [
+       
     {
-        uralkodo_nevI : '   .ISTVÁN',
+        uralkodo_nevI : 'I.István',
         esemeny_I1 : 'Koronázás',
         evszam_I1 : '1000',
-        
         esemeny_I2 : 'Pannonhalmi apátság megalapítása',
         evszam_I2 : '1001',
-
+    },
+    {
+        
         uralkodo_nevB : 'IV.Béla',
-        esemeny_B : 'Tatájárás',
-        evszam_B : '1241-1242',
-
         uralkodo_nevM : 'Mátyás király',
-        esemeny_M1 : 'Bélcs elfoglalása',
-        evszam_M1 : '1485',
-
-        esemeny_M2 : 'Kenyérmezei csata',
-        evszam_M2 : '1479',
-
         uralkodo_nevF : 'II.Rákoczi Ferenc',
+   
+        esemeny_B : 'Tatájárás',
+        esemeny_M1 : 'Bélcs elfoglalása',
+        esemeny_M2 : 'Kenyérmezei csata',
         esemeny_F1 : 'A szabadságharc kezdete',
-        evszam_F1 : '1703',
-
         esemeny_F2 : 'A szabadságharc vége',
+    },
+    {
+        
+       
+        evszam_B : '1241-1242',
+        evszam_M1 : '1485',
+        evszam_M2 : '1479',
+        evszam_F1 : '1703',
         evszam_F2 : '1711',
-
+        
+        
     }
+] 
+    /*
+      
+    */
+
+   
+    
 
 const tbody = document.querySelector("tbody")
 
@@ -48,21 +59,36 @@ function generateheader(elso, masodik, harmadik) {
 
     
 }
+        
 
-function generatetable() {
+function generateTable() {
+    for(let i = 0; i < tomb.length; i++)
+{
     const sor = document.createElement('tr')
-    const elsocell = document.createElement('td')
-    const masodikcella = document.createElement('td')
-    const harmadikcella = document.createElement('td')
-    
-    for(adat in tomb); {
-        elsocell.innerHTML = adat.innerHTML
-        sor.appendChild(elsocell)
+    if(tomb[i].uralkodo_nevI)
+    {
+        const cella = document.createElement('td')
+        cella.innerHTML = tomb[i].uralkodo_nevI
+        sor.appendChild(cella)
+        const esemeny = document.createElement('td')
+        esemeny.innerHTML = tomb[i].esemeny_I1
+        sor.appendChild(esemeny)
+        const ev = document.createElement('td')
+        ev.innerHTML = tomb[i].evszam_I1
+        sor.appendChild(ev)
+        tbody.appendChild(sor)
     }
 
-    tbody.appendChild(sor)
+    
 }
+  
 
+}
+    
 
-
-
+/*
+  cella1.innerHTML = tomb[0].uralkodo_nevI
+    cella2.innerHTML = tomb[0].esemeny_I1
+    cella3.innerHTML = tomb[0].evszam_I1
+    */
+    
